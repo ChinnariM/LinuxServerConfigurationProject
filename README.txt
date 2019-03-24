@@ -76,7 +76,7 @@ sudo nano .ssh/authorized_keys
 copy the public key click on CTRL+X and Y to save.
 •	Now run chmod 700 .ssh
 •	Run chmod 644 .ssh/authorized_keys
-•	Now Make sure key-based authentication is forced (log in as grader, open the /etc/ssh/sshd_config file, and find the line that says, 'PasswordAuthentication ‘yes', change the 'yes' to 'no'; save and exit the file; 
+•	Now Make sure key-based authentication is forced (log in as grader, open the /etc/ssh/sshd_config file, and find the line that says, 'PasswordAuthentication ‘yes', change the 'yes' to 'no';  and set permitrootlogin to 'no' save and exit the file; 
 •	run sudo service ssh restart:::: this step is mandatory (don’t forget to execute it)
 •	now try to login as grader with key based login
 ssh -i ~/.ssh/grader -p 2200 grader@34.227.20.85
